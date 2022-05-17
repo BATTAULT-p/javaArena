@@ -1,6 +1,18 @@
-public class LessonOne {
-    public static void print(String elementamodifier){
+package com.paul.openclassrooms;
 
+public class LessonOne {
+
+    public void coucou(){
+        System.out.println("coucou");
+    }
+
+
+
+
+
+    public static void print(String elementamodifier){
+        String monString1 = new String("hhhhh1");
+        String monString2 = "hhhhh2";
         String elementModifier= elementamodifier.toUpperCase();
         System.out.println(elementModifier);
     }

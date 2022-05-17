@@ -1,18 +1,18 @@
-package cleanHello;
+package com.paul.openclassrooms;
 
 
 public class LessonTwo {
 
     /** Le programme commence ici */
     public static void main(String[] args) {
-        sayHelloTo("world",5);
+        sayHelloTo("world");
     }
 
     /** affiche le message "hello" au destinataire fourni
      *
-     * @param who
+     * @param elementamodifier
      */
-    private static void sayHelloTo(String elementamodifier,int age) {
+    private static void sayHelloTo(String elementamodifier) {
         System.out.println("Hello " + elementamodifier);
     }
 
