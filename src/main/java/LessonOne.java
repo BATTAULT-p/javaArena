@@ -1,5 +1,9 @@
 public class LessonOne {
+    public static void print(String elementamodifier){
 
+        String elementModifier= elementamodifier.toUpperCase();
+        System.out.println(elementModifier);
+    }
     public static void main(String[] args) {
         int thisYear = 2019;
         String birthdayMonth = "June";
@@ -8,6 +12,10 @@ public class LessonOne {
         firstDay += daysInWeek ;
         final int STARTINGDAY = firstDay ;
 
+        print(birthdayMonth);
+
+
+
         //TODO Etape 1 : créez une variable daysInWeek avec une valeur de 7
 
         //TODO Etape 2 : ajoutez la valeur de la variable daysInWeek à la variable firstDay, en utilisant un opérateur raccourci
@@ -15,7 +23,7 @@ public class LessonOne {
         //TODO Etape 3 : créez une constante numérique nommé STARTINGDAY avec la nouvelle valeur de la variable firstDay
 
         // Affiche le résultat
-        System.out.println("There are " + daysInWeek + "days in a week.\nYour starting day in the month is: " + STARTINGDAY);
+        print("There are " + daysInWeek + "days in a week.\nYour starting day in the month is: " + STARTINGDAY);
     }
 
 }
