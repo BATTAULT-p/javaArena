@@ -4,49 +4,46 @@ public class Arena {
 
 
     public static void main(String[] args){
-        Animal carapuce = new Animal("carapuce", 12);
-        Animal salameche = new Animal("salameche", 12);
-        int i = 0;
-        int e = 0;
-        int pointsCarapuce = 0;
-        int pointsSalameche = 0;
-        for (int combat = 0; combat<3;combat++) {
+        Animal carapuce = new Animal("carapuce");
+        Animal salameche = new Animal("salameche");
+        Animal pikachu = new Animal("pikachu");
 
-            i = randomNumber() + carapuce.power;
-            e = randomNumber() + salameche.power;
-
-
-            Animal winner;
-            if (i > e) {
-                winner = carapuce;
-                pointsCarapuce = pointsCarapuce + 1;
-            } else {
-                winner = salameche;
-                pointsSalameche = pointsSalameche + 1;
-            }
-
-            print(winner);
-
+        for (int combat = 0; combat<5;combat++) {
+            fight(carapuce, pikachu);
         }
-        Animal bigwinner ;
-        if (pointsCarapuce > pointsSalameche) {
-            bigwinner = carapuce;
-        } else {
-            bigwinner = salameche;
-        }
-        Victoryprint(bigwinner);
+        win(carapuce, pikachu);
     }
 
-    static void print(Animal pokemon){
-        System.out.println("vainqueur :" + pokemon.type);
+    static void Fightwinner(Animal pokemon){
+        System.out.println("vainqueur :" + pokemon.getType() );
+        pokemon.win();
     }
-    static void Victoryprint(Animal pokemon){
-        System.out.println("Le grand vainqueur est :" + pokemon.type);
+    static void Bigwinner(Animal pokemon){
+        System.out.println("Le grand vainqueur est :" + pokemon.getType());
     }
     static int randomNumber(){
         return  (int) ((Math.random() * (10-1)));
     }
+    static void fight(Animal fighter1, Animal fighter2){
+        int i = randomNumber() + fighter1.getPower();
+        int e = randomNumber() + fighter2.getPower();
 
-
+        Animal winner;
+        if (i > e) {
+            winner = fighter1;
+        } else {
+            winner = fighter2;
+        }
+        Fightwinner(winner);
+    }
+    static void win(Animal fighter1, Animal fighter2){
+        Animal bigwinner ;
+        if (fighter1.getVictory() > fighter2.getVictory()) {
+            bigwinner = fighter1;
+        } else {
+            bigwinner = fighter2;
+        }
+        Bigwinner(bigwinner);
+    }
 
 }
