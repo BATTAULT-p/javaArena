@@ -18,8 +18,8 @@ public class Fight {
 
         return  (int) ((Math.random() * (10-1)));
     }
-    static void Fightwinner(Animal pokemon){
-        System.out.println("vainqueur :" + pokemon.getType() );
-        pokemon.win();
+    static void Fightwinner(Animal animal){
+        System.out.println("vainqueur :" + animal.getType() );
+        animal.win();
     }
 }
