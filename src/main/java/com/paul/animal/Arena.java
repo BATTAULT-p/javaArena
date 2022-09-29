@@ -4,18 +4,23 @@ public class Arena {
 
 
     public static void main(String[] args){
-        Pokemon carapuce = new Pokemon("carapuce", 0, "eau");
-        Pokemon salameche = new Pokemon("salameche", 0, "feu");
-        Pokemon pikachu = new Pokemon("pikachu", 0,"electrique");
+        Pokemon carapuce = new Pokemon("carapuce", 0,Elements.WATER);
+        Pokemon salameche = new Pokemon("salameche", 0, Elements.FIRE);
+        Pokemon pikachu = new Pokemon("pikachu", 0,Elements.ELECTRIC);
 
-        Fight manche = new Fight();
+        Fight manche = new Fight(1000, 1);
 
         for (int combat = 0; combat<5;combat++) {
 
-            manche.match(carapuce, salameche);
+            Animal winner = manche.match(carapuce, salameche);
+            Fightwinner(winner);
         }
         win(carapuce, salameche);
 
+    }
+    static void Fightwinner(Animal animal){
+        System.out.println("vainqueur :" + animal.getType() );
+        animal.win();
     }
 
     static void Bigwinner(Animal pokemon){

@@ -9,7 +9,7 @@ public class Animal {
         this(type,0);
     }
     public Animal(String type,int power){
-        this.type = type;
+        type = type;
         this.power = power;
         this.victory = 0;
     }
